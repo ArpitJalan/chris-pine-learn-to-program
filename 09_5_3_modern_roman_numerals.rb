@@ -5,11 +5,12 @@
 # C= 100
 # D = 500
 # M = 1000
-# 3769 should return MMMDCCLXVIIII
-# 9 should return VIIII
-# 4 should return IIII
+# 3999 should return MMM CM XC IX
+# 3444 should return MMM CD XL IV
+# 9 should return IX
+# 4 should return IV
 
-def old_roman_numeral num
+def modern_roman_numeral num
   
   numeral = String.new
 
@@ -20,9 +21,9 @@ def old_roman_numeral num
 
   # how many five_hundreds?
   five_hundreds = num / 500
-  if five_hundreds != 0 then numeral << "D" * five_hundreds end
+  if five_hundreds != 0 then numeral << "D" * five_hundreds end 
   num = num % 500
-
+ 
   # how many hundreds?
   hundreds = num / 100
   if hundreds != 0 then numeral << "C" * hundreds end
@@ -48,7 +49,7 @@ def old_roman_numeral num
   if ones != 0 then numeral << "I" * ones end
   num = num % 1
 
-  puts "#{num} is #{numeral} in old style Roman."
+  puts "#{num} is #{numeral} in modern style Roman."
 end
 
-old_roman_numeral 3769
+modern_roman_numeral 3999
