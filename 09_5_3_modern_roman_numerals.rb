@@ -75,11 +75,11 @@ def modern_roman_numeral num
   ones = num / 1
   num = num % 1
 
-    if fives == 1 && ones == 4
+  if fives == 1 && ones == 4
 
     numeral << "IX"
     
-  elsif fifties == 0 && tens == 4
+  elsif fives == 0 && ones == 4
     
     numeral << "IV"
 
@@ -93,4 +93,4 @@ def modern_roman_numeral num
   puts "#{num_stored} is #{numeral} in modern style Roman."
 end
 
-modern_roman_numeral 3219
+modern_roman_numeral 1954
